@@ -19,7 +19,18 @@ namespace ChessTools
 
         public int start()
         {
+
+
+
+
+            int marks = evaluate();
+            return marks;
+        }
+
+        private int evaluate()
+        {
             Random random = new Random();
+            int marks = 0;
 
             for (int round = 0; round < number_of_rounds; round++)
             {
@@ -32,7 +43,7 @@ namespace ChessTools
 
                 Color user_color = mapUserInputWithColor(user_input);
 
-                if(user_color == board.board[cell])
+                if (user_color == board.board[cell])
                 {
                     Console.WriteLine("Correct");
                     marks++;
