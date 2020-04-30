@@ -36,7 +36,7 @@ namespace ChessTools
 
         static void gameInitDisplay()
         {
-            Console.WriteLine("=======================================================================================");
+            Console.WriteLine("=========================================================================================");
             Console.WriteLine("**                _ _ _ _ _ _ _ _ _ _ _ _                                              **");
             Console.WriteLine("**               | + + + + + |           |                                             **");
             Console.WriteLine("**               | + + + + + |           |                                             **");
@@ -49,9 +49,9 @@ namespace ChessTools
             Console.WriteLine("**               |           | + + + + + |             6. END GAMES                    **");
             Console.WriteLine("**               |_ _ _ _ _  |_+_+_+_+_+_|                                             **");
             Console.WriteLine("**                                                                                     **");
-            Console.WriteLine("**                           - - - - - - - - - - - - - -                               **");
-            Console.WriteLine("============================|| WELCOME TO THE CHESS TOOLS ||===========================");
-            Console.WriteLine("                             - - - - - - - - - - - - - -                       \n\n\n");
+            Console.WriteLine("**                           - - - - - - - - - - - - - - -                             **");
+            Console.WriteLine("============================|| WELCOME TO THE CHESS TOOLS ||=============================");
+            Console.WriteLine("                             - - - - - - - - - - - - - - -                      \n\n\n");
             
         }
 
