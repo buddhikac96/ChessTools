@@ -8,21 +8,15 @@ namespace ChessTools
     {
         int number_of_rounds;
         Board board;
-        int marks;
 
         public Game(int rounds)
         {
             number_of_rounds = rounds;
             board = new Board();
-            marks = 0;
         }
 
         public int start()
         {
-
-
-
-
             int marks = evaluate();
             return marks;
         }
@@ -37,7 +31,8 @@ namespace ChessTools
                 int num = random.Next(10000) % 64;
                 var cell = board.get_cell(num);
 
-                Console.Write(cell + " - ");
+                Console.WriteLine(">> " + (round + 1) + " - " + cell);
+                Console.Write(">> ");
 
                 var user_input = Console.ReadLine();
 
@@ -45,17 +40,19 @@ namespace ChessTools
 
                 if (user_color == board.board[cell])
                 {
-                    Console.WriteLine("Correct");
+                    Console.WriteLine(">> [Correct]");
                     marks++;
                 }
                 else
                 {
-                    Console.WriteLine("Incorrect");
+                    Console.WriteLine(">> [Incorrect]");
                 }
+                Console.WriteLine("");
             }
 
             return marks;
         }
+
 
         private Color mapUserInputWithColor(string input)
         {
@@ -77,5 +74,7 @@ namespace ChessTools
                 return Color.White;
             }
         }
+
+        
     }
 }
