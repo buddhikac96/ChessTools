@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Linq;
+using System.Threading;
 
 namespace ChessTools
 {
@@ -17,8 +18,31 @@ namespace ChessTools
 
         public int start()
         {
+            printDescription();
             int marks = evaluate();
             return marks;
+        }
+
+        private void printDescription()
+        {
+            Console.WriteLine("==============================================================");
+            Console.WriteLine("||          WELCOME TO THE COLOR MANIA                      ||");
+            Console.WriteLine("==============================================================");
+            Console.WriteLine("\n");
+            Console.WriteLine("-Instructions:");
+            Console.WriteLine("     *Enter the color of the cell");
+            Console.WriteLine("     *White => W / w / white / White / WhItE");
+            Console.WriteLine("     *Black => B / b / black / Black / BlAcK");
+
+            string letter_loop = "Here you go . . . GOOD LUCK!";
+
+            foreach(var letter in letter_loop)
+            {
+                Console.Write(letter);
+                Thread.Sleep(100);
+            }
+
+            Console.WriteLine("\n");
         }
 
         private int evaluate()
@@ -32,7 +56,7 @@ namespace ChessTools
                 var cell = board.get_cell(num);
 
                 Console.WriteLine(">> " + (round + 1) + " - " + cell);
-                Console.Write(">> ");
+                Console.Write(">> Color > ");
 
                 var user_input = Console.ReadLine();
 
