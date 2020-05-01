@@ -29,9 +29,7 @@ namespace ChessTools
             int rounds = Int32.Parse(Console.ReadLine());
 
             var game = new Game(rounds);
-            var marks = game.start();
-
-            Console.WriteLine(">> You earn " + marks + " / " + rounds);
+            game.start();
         }
 
         static void gameInitDisplay()

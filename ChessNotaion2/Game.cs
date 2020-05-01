@@ -16,33 +16,42 @@ namespace ChessTools
             board = new Board();
         }
 
-        public int start()
+        public void start()
         {
             printDescription();
             int marks = evaluate();
-            return marks;
+            printEnd(marks);
         }
 
         private void printDescription()
         {
             Console.WriteLine("==============================================================");
-            Console.WriteLine("||          WELCOME TO THE COLOR MANIA                      ||");
+            Console.WriteLine("||              WELCOME TO THE COLOR MANIA                  ||");
             Console.WriteLine("==============================================================");
             Console.WriteLine("\n");
-            Console.WriteLine("-Instructions:");
+            Console.WriteLine("Instructions:");
             Console.WriteLine("     *Enter the color of the cell");
             Console.WriteLine("     *White => W / w / white / White / WhItE");
-            Console.WriteLine("     *Black => B / b / black / Black / BlAcK");
+            Console.WriteLine("     *Black => B / b / black / Black / BlAcK\n");
 
-            string letter_loop = "Here you go . . . GOOD LUCK!";
+            string letter_loop = "+ + + Here you go . . . GOOD LUCK! + + +";
 
-            foreach(var letter in letter_loop)
-            {
+            letter_loop.ToList().ForEach(letter => {
                 Console.Write(letter);
                 Thread.Sleep(100);
-            }
+            });
+            Thread.Sleep(500);
 
             Console.WriteLine("\n");
+        }
+
+        private void printEnd(int marks)
+        {
+            string letter_loop = "WELDONE! You got " + marks + " out of " + number_of_rounds; ;
+            letter_loop.ToList().ForEach(letter => {
+                Console.Write(letter);
+                Thread.Sleep(100);
+            });
         }
 
         private int evaluate()
