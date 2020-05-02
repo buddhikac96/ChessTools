@@ -46,6 +46,7 @@
     <Compile Include="Board.cs" />
     <Compile Include="Color.cs" />
     <Compile Include="Game.cs" />
+    <Compile Include="GameMessages.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
