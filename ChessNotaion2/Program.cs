@@ -26,11 +26,31 @@ namespace ChessTools
         static void Run()
         {
             GameMessages.AppStartMessage();
-            Console.Write(">> Enter number of rounds - ");
-            int rounds = Int32.Parse(Console.ReadLine());
+            GameMessages.GameSelectMessage();
 
-            var game = new Game(rounds);
+            var game = GameSelection();
+
             game.start();
+        }
+
+        static Game GameSelection()
+        {
+            Console.Write(">> Game Number - ");
+            int game = Int32.Parse(Console.ReadLine());
+
+            switch (game)
+            {
+                case 1:
+                    Console.Write(">> Enter number of rounds - ");
+                    int rounds1 = Int32.Parse(Console.ReadLine());
+                    Console.WriteLine();
+                    return new Game(rounds1);
+                default:
+                    Console.Write(">> Enter number of rounds - ");
+                    int rounds2 = Int32.Parse(Console.ReadLine());
+                    Console.WriteLine();
+                    return new Game(rounds2);
+            }
         }
     }
 }
