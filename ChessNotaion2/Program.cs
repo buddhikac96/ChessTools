@@ -1,4 +1,6 @@
 ﻿using ChessNotaion2;
+using ChessNotaion2.Games;
+using Interfaces;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -33,7 +35,7 @@ namespace ChessTools
             game.start();
         }
 
-        static Game GameSelection()
+        static IGame GameSelection()
         {
             Console.Write(">> Game Number - ");
             int game = Int32.Parse(Console.ReadLine());
@@ -44,12 +46,12 @@ namespace ChessTools
                     Console.Write(">> Enter number of rounds - ");
                     int rounds1 = Int32.Parse(Console.ReadLine());
                     Console.WriteLine();
-                    return new Game(rounds1);
+                    return new ColorMania(rounds1);
                 default:
                     Console.Write(">> Enter number of rounds - ");
                     int rounds2 = Int32.Parse(Console.ReadLine());
                     Console.WriteLine();
-                    return new Game(rounds2);
+                    return new ColorMania(rounds2);
             }
         }
     }

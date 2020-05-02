@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChessTools", "ChessNotaion2
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", "{82FE1590-EDD5-4255-B353-B77894E6924E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interfaces", "Interfaces\Interfaces.csproj", "{F755F657-2D5D-4F62-8CE6-AFC72DDE6D91}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{82FE1590-EDD5-4255-B353-B77894E6924E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{82FE1590-EDD5-4255-B353-B77894E6924E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{82FE1590-EDD5-4255-B353-B77894E6924E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F755F657-2D5D-4F62-8CE6-AFC72DDE6D91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F755F657-2D5D-4F62-8CE6-AFC72DDE6D91}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F755F657-2D5D-4F62-8CE6-AFC72DDE6D91}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F755F657-2D5D-4F62-8CE6-AFC72DDE6D91}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,16 +1,21 @@
-﻿using System;
+﻿using ChessTools;
+using Interfaces;
+using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Text;
 using System.Threading;
+using System.Threading.Tasks;
 
-namespace ChessTools
+namespace ChessNotaion2.Games
 {
-    public class Game
+    class ColorMania : IGame
     {
         int number_of_rounds;
         Board board;
 
-        public Game(int rounds)
+        public ColorMania(int rounds)
         {
             number_of_rounds = rounds;
             board = new Board();
@@ -93,7 +98,7 @@ namespace ChessTools
 
             string[] valid_inputs = { "b", "black", "w", "white" };
 
-            if(!valid_inputs.Any(color => color == input))
+            if (!valid_inputs.Any(color => color == input))
             {
                 throw new InvalidDataException("Invalid Color input");
             }
@@ -107,7 +112,6 @@ namespace ChessTools
                 return Color.White;
             }
         }
-
-        
     }
 }
+
