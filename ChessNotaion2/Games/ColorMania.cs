@@ -98,9 +98,12 @@ namespace ChessNotaion2.Games
 
             string[] valid_inputs = { "b", "black", "w", "white" };
 
-            if (!valid_inputs.Any(color => color == input))
+            while(!valid_inputs.Any(color => color == input))
             {
-                throw new InvalidDataException("Invalid Color input");
+                Console.WriteLine(">> [Error] Invalid Color Input. Please enter one of these. [ W | w | white | White | b | B | black | Black ]");
+                Console.Write(">> Color - ");
+                var user_input = Console.ReadLine();
+                return mapUserInputWithColor(user_input);
             }
 
             if (input == "b" || input == "black")
