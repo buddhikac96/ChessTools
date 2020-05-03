@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace ChessNotaion2
+namespace ChessTools
 {
     public class GameMessages
     {   

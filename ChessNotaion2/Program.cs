@@ -1,5 +1,5 @@
-﻿using ChessNotaion2;
-using ChessNotaion2.Games;
+﻿using ChessTools;
+using ChessTools.Games;
 using Interfaces;
 using System;
 using System.Collections.Generic;

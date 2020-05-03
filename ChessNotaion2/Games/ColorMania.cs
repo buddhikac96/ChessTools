@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace ChessNotaion2.Games
+namespace ChessTools.Games
 {
     class ColorMania : IGame
     {
