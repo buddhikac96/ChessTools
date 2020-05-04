@@ -22,17 +22,27 @@ namespace ChessTools
             {
                 Console.WriteLine("Something gone wrong . . . !");
             }
-            Console.ReadLine();
         }
 
         static void Run()
         {
             GameMessages.AppStartMessage();
+            GameLoop();
+        }
+
+        static void GameLoop()
+        {
             GameMessages.GameSelectMessage();
-
             var game = GameSelection();
-
             game.start();
+            Console.Write(">> Do you want to play again ? [Y / N] > ");
+            var again = Console.ReadLine();
+            if(again.ToLower() == "y" || again.ToLower() == "yes")
+            {
+                Console.WriteLine("\n");
+                GameLoop();
+            }
+            GameMessages.GameEndMessage();
         }
 
         static IGame GameSelection()

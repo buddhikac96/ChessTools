@@ -39,5 +39,16 @@ namespace ChessTools
             Console.WriteLine();
             Thread.Sleep(200);
         }
+
+        public static void GameEndMessage()
+        {
+            string message = "=====================================|| THE CHESS TOOLS ||======================================";
+            message.ToList().ForEach(letter =>
+            {
+                Console.Write(letter);
+                Thread.Sleep(10);
+            });
+            Thread.Sleep(500);
+        }
     }
 }

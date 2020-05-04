@@ -57,6 +57,7 @@ namespace ChessTools.Games
                 Console.Write(letter);
                 Thread.Sleep(100);
             });
+            Console.WriteLine("\n");
         }
 
         private int evaluate()
