@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace ChessTools.Games
 {
-    class ColorMania : IGame
+    public class ColorMania : IGame
     {
         int number_of_rounds;
         Board board;
@@ -116,7 +116,7 @@ namespace ChessTools.Games
             }
         }
 
-        private string getScoreMessage(int score, int num_of_rounds)
+        public string getScoreMessage(int score, int num_of_rounds)
         {
             int average = (int)(100 * score / num_of_rounds);
 
