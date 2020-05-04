@@ -52,7 +52,7 @@ namespace ChessTools.Games
 
         private void printEnd(int marks)
         {
-            string letter_loop = "WELDONE! You got " + marks + " out of " + number_of_rounds; ;
+            string letter_loop = getScoreMessage(marks, number_of_rounds) + " You got " + marks + " out of " + number_of_rounds; ;
             letter_loop.ToList().ForEach(letter => {
                 Console.Write(letter);
                 Thread.Sleep(100);
@@ -113,6 +113,26 @@ namespace ChessTools.Games
             else
             {
                 return Color.White;
+            }
+        }
+
+        private string getScoreMessage(int score, int num_of_rounds)
+        {
+            int average = (int)(100 * score / num_of_rounds);
+
+            if(average > 90)
+            {
+                return "AWESOME!";
+            }else if(average > 75)
+            {
+                return "GREATE! You can Improve more..!";
+            }else if(average > 50)
+            {
+                return "NICE JOB! Practie more to become a hero..!";
+            }
+            else
+            {
+                return "GOOD JOB! Lets practice more..!";
             }
         }
     }

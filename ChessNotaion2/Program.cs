@@ -18,9 +18,9 @@ namespace ChessTools
             {
                 Run();
             }
-            catch(InvalidDataException e)
+            catch
             {
-                Console.WriteLine("You have entered a invalid color. Are you color blind or something. There is only two colors fool!");
+                Console.WriteLine("Something gone wrong . . . !");
             }
             Console.ReadLine();
         }
