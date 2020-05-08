@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,9 +9,9 @@ namespace ChessNotaion2.Utils
 {
     public class UserController
     {
-        public User Player{ get; set; }
+        public IUser Player{ get; set; }
 
-        public User CreateUser()
+        public IUser CreateUser()
         {
             Player = new User();
             Console.Write(">> Enter Name - ");

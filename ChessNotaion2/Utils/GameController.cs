@@ -4,6 +4,7 @@ using Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -11,6 +12,13 @@ namespace ChessNotaion2.Utils
 {
     public class GameController
     {
+
+        IUser plyaer;
+
+        public GameController(IUser _player)
+        {
+            plyaer = _player;
+        }
 
         public void start()
         {
